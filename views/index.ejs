@@ -12,9 +12,9 @@
     <div class="main w-full min-h-screen bg-zinc-900">
         <div class="form p-20 ">
             <form action="/post" method="post">
-                <input class="block px-5 py-2 w-full rounded-md outline-none" type="text" placeholder="Title">
+                <input class="block px-5 py-2 w-full rounded-md outline-none" type="text" placeholder="Title" name="title">
             <textarea class="resize-none block px-5 py-2 mt-2 w-full rounded-md outline-none"
-                placeholder="Start typing"></textarea>
+                placeholder="Start typing" name="textarea"></textarea>>
             <input class="block px-5 py-2 mt-2 bg-slate-100 mx-auto rounded-lg" type="submit" value="Push">
             </form>
             
@@ -25,7 +25,7 @@
             <% if(file.length> 0){ %>
                 <% file.forEach(function(f){ %>
                     <div class="task bg-zinc-700 w-72 p-2 rounded-lg">
-                        <h1 class="text-3xl ">title</h1>
+                        <h1 class="text-3xl "><%= f %></h1>
                         <a href="" class="text-blue-500 inline-block mt-2"> Read More</a>
                     </div>
                     <% }) %>
